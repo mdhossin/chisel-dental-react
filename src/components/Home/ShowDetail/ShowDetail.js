@@ -29,7 +29,7 @@ const ShowDetail = () => {
       <div className="container my-5">
         <Row>
           <Col xs={12} md={6}>
-            <img className="img-fluid detail-img" src={service?.img} alt="" />
+            <img className="img-fluid detail-img" src={service?.image} alt="" />
           </Col>
           <Col xs={12} md={6}>
             <div className="title-card">
@@ -39,6 +39,9 @@ const ShowDetail = () => {
             </div>
             <p>{service?.description}</p>
             <p>{service?.extra}</p>
+            <div>
+              <img className="img-fluid detail-img" src={service?.img} alt="" />
+            </div>
           </Col>
         </Row>
       </div>
