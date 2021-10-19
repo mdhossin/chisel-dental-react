@@ -1,0 +1,13 @@
+.achieve-detail h2{
+    font-size: 36px;
+    color: #FB8176;
+    font-weight: 600;
+     font-family: 'Ubuntu',
+     sans-serif;
+}
+.achieve-detail p{
+    font-size: 17px;
+    font-family: 'Ubuntu',
+    sans-serif;
+    font-weight: 500;
+}

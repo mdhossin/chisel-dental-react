@@ -1,0 +1,49 @@
+
+.card-title{
+ font-family: 'Ubuntu',
+ sans-serif;
+}
+.card-hover {
+    border: none;
+    transition: .3s all ease-in;
+    -webkit-transition: .3s all ease-in;
+    -moz-transition: .3s all ease-in;
+    -ms-transition: .3s all ease-in;
+    -o-transition: .3s all ease-in;
+}
+
+.card-hover:hover {
+    transform: scale(.98);
+    -webkit-transform: scale(.98);
+    -moz-transform: scale(.98);
+    -ms-transform: scale(.98);
+    -o-transform: scale(.98);
+}
+
+.card-footer{
+    background-color: #ffffff;
+    border: none;
+}
+
+.learn-more{
+    text-decoration: none;
+    margin-left:4px;
+    color: #FB8176;
+}
+
+.title-card .heading-border::after {
+    left:10%;
+    transform: translateX(-50%);
+    width: 60px;
+}
+
+.heading-border::after {
+    position: absolute;
+    content: '';
+    bottom: -10px;
+    left: 0;
+    width: 33px;
+    height: 3px;
+    background-color: #f59f97;
+    
+}

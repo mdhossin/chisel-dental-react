@@ -1,0 +1,16 @@
+.detail-heading{
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Ubuntu',
+    sans-serif;
+    color: #444444;
+}
+.detail-img{
+    height: 100%;
+}
+/* responsive for mobile */
+@media only screen  and (max-width: 600px){
+    .detail-heading{
+        margin-top: 20px !important;
+    }
+}

@@ -1,0 +1,43 @@
+.team-heading h2{
+    font-size: 36px;
+    color: #fb814e;
+    font-weight: 500;
+     font-family: 'Ubuntu',
+     sans-serif;
+}
+
+.team-heading p{
+    width: 70%;
+    margin:  0 auto;
+}
+
+.team-detail {
+    color: #444444;
+    font-weight: 500;
+    font-family: 'Ubuntu',
+        sans-serif;
+}
+.team-sub-title{
+    font-weight: 500;
+    font-family: 'Ubuntu',
+    sans-serif;
+
+}
+/* responsive for mobile */
+@media only screen and (max-width: 600px) {
+    .team-heading p {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .team-img {
+        margin: 0 auto !important;
+       display: block;
+       width: 300px;
+    }
+    .team-detail{
+        margin-top: 20px;
+    }
+    .team-girl{
+        margin-top: 20px !important;
+    }
+}

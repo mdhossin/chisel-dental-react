@@ -1,0 +1,45 @@
+.service-title {
+    width: 70% !important;
+}
+
+.services-text {
+    color: #222121;
+    font-size: 17px;
+    font-weight: 500;
+    font-family: 'Ubuntu',
+        sans-serif;
+}
+
+.all-services h2 {
+    font-size: 36px;
+    color: #FB8176;
+    font-weight: 600;
+}
+
+.heading-border {
+    position: relative;
+}
+
+.all .heading-border::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+}
+
+.heading-border::after {
+    position: absolute;
+    content: '';
+    bottom: -10px;
+    left: 0;
+    width: 33px;
+    height: 3px;
+    background-color: #f59f97;
+    
+}
+
+
+@media only screen and (max-width: 600px) {
+    .service-title {
+        width: 90% !important;
+    }
+}

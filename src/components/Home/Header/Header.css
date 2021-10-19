@@ -1,0 +1,12 @@
+.navbrand{
+    font-weight: 700;
+    color: #2C3E14;
+    font-style: italic;
+}
+/* responsive for mobile */
+@media only screen and (max-width: 600px) {
+   .main-nav .nav-item{
+       display: block !important;
+        
+    }
+}

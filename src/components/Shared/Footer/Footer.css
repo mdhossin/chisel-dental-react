@@ -1,0 +1,21 @@
+.background-footer{
+    background-color: #262F36;
+    color: #C9C9C9;
+}
+.background-footer h4{
+    color: white;
+    font-family: 'Ubuntu',
+    sans-serif;
+}
+.phone-icon{
+    font-size: 18px;
+    margin-right: 5px;
+   
+}
+.icon{
+    font-size: 28px;
+}
+.instagram img{
+    width: 28px;
+    height: 28px;
+}

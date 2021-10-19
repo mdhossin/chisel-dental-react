@@ -1,0 +1,14 @@
+.vision{
+    color: #444444;
+    font-weight: 600
+    ;
+    font-family: 'Ubuntu',
+    sans-serif;
+}
+
+/* responsive for mobile  */
+@media only screen and (max-width: 600px) {
+    .vision-img{
+        margin-bottom: 20px !important;
+    }
+}

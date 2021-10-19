@@ -1,0 +1,20 @@
+.heading-border h2{
+    font-size: 36px;
+    font-weight: 600;
+    color: #FB814E;
+    font-family: 'Ubuntu',
+    sans-serif;
+}
+.heading{
+    font-weight: 500;
+    font-family: 'Ubuntu',
+    sans-serif;
+    color: #444444;
+}
+
+/* responsive for mobile */
+@media only screen and (max-width: 600px) {
+    .about{
+        margin-bottom: 20px !important;
+    }
+}
