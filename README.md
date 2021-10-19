@@ -1,4 +1,4 @@
-# Welcome to Chisel Dental Clinice website
+# Welcome to Chisel Dental Clinic website
 
 - This website for dental visit this link for more detial (https://chisel-dantal.web.app)
 - You see the best services what we provided
