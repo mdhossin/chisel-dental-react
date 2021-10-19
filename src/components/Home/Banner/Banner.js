@@ -29,7 +29,7 @@ const Banner = () => {
                 </p>
 
                 <Button variant="danger">CALL US TODAY</Button>
-                <Button className="ms-2" variant="danger">
+                <Button className="ms-2 banner-btn" variant="danger">
                   READ MORE
                 </Button>
               </div>
@@ -55,7 +55,7 @@ const Banner = () => {
                 </p>
 
                 <Button variant="danger">CALL US TODAY</Button>
-                <Button className="ms-2" variant="danger">
+                <Button className="ms-2 banner-btn" variant="danger">
                   READ MORE
                 </Button>
               </div>
@@ -69,7 +69,7 @@ const Banner = () => {
             />
 
             <Carousel.Caption>
-              <div className="mx-auto w-75 text-center pb-5 slider-text">
+              <div className="mx-auto w-75 text-center pb-5 slider-text bannder-slider">
                 <span className="d-block text-start">
                   <span>HIGHLY QUALIFIED</span>
                 </span>
@@ -81,7 +81,7 @@ const Banner = () => {
                 </p>
 
                 <Button variant="danger">CALL US TODAY</Button>
-                <Button className="ms-2" variant="danger">
+                <Button className="ms-2 banner-btn" variant="danger">
                   READ MORE
                 </Button>
               </div>

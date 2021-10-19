@@ -33,15 +33,20 @@
 @media only screen and (max-width: 600px) {
 
     /*Big smartphones [426px -> 600px]*/
+    .slider-text{
+        margin-top: 50px;
+    }
     .slider-text .main-heading {
         font-size: 32px !important;
     }
 
     .slider-text {
         width: 100% !important;
+        margin-top: 100px !important;
     }
-     .slider-text span {
-    font-size: 18px;
+    .slider-text span {
+       font-size: 18px;
+
     }
    .description{
        width: 350px;
@@ -49,6 +54,13 @@
    }
    .slider-img {
        height: 400px !important;
-   }
 
+   }
+   .banner-btn{
+       
+       display: none !important;
+   }
+.banner-slider {
+    margin-top: 50px !important;
+}
 }
