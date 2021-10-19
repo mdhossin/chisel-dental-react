@@ -1,5 +1,5 @@
 import { getAuth, updateProfile } from "@firebase/auth";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import swal from "sweetalert";
 import Header from "../../Home/Header/Header";
@@ -9,30 +9,33 @@ import Footer from "../../Shared/Footer/Footer";
 const Register = () => {
   const { signInWithGoogle, signUpUser, setUser } = useAuth();
   const [loading, setLoading] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const auth = getAuth();
-  const nameRef = useRef();
-  const emailRef = useRef();
-  const passwordRef = useRef();
 
   // sign up
   const signUp = (e) => {
     setLoading(true);
     e.preventDefault();
-    signUpUser(emailRef.current.value, passwordRef.current.value)
+    signUpUser(email, password)
       .then((res) => {
         setUser(res.user);
+        window.location.reload();
         updateProfile(auth.currentUser, {
-          displayName: nameRef.current.value,
+          displayName: name,
         }).then(() => {
           swal("Good job!", "Account has been created!", "success");
         });
       })
       .catch((err) => swal("Something went wrong!", `${err.message}`, "error"))
       .finally(() => setLoading(false));
-    emailRef.current.value = "";
-    passwordRef.current.value = "";
-    nameRef.current.value = "";
+
+    // clear
+    setName("");
+    setEmail("");
+    setPassword("");
   };
 
   return (
@@ -45,7 +48,8 @@ const Register = () => {
             <small>Your Name</small>
           </p>
           <input
-            ref={nameRef}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             type="name"
             name="name"
             id="login-input"
@@ -56,7 +60,8 @@ const Register = () => {
             <small>Email or mobile phone number</small>
           </p>
           <input
-            ref={emailRef}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             type="email"
             name="email"
             id="login-input"
@@ -67,7 +72,8 @@ const Register = () => {
             <small>Enter your password</small>
           </p>
           <input
-            ref={passwordRef}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             type="password"
             name="password"
             placeholder="Password"
@@ -82,7 +88,7 @@ const Register = () => {
               onClick={signUp}
               className="btn"
               type="submit"
-              value="Submit"
+              value="Sign Up"
             />
           )}
         </div>
