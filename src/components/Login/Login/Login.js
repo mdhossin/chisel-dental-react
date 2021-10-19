@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { NavLink, useLocation, useHistory } from "react-router-dom";
 import swal from "sweetalert";
 import Header from "../../Home/Header/Header";
@@ -8,6 +8,8 @@ import "./Login.css";
 // login page
 const Login = () => {
   const { signInWithGoogle, setUser, signInUser } = useAuth();
+
+  const [loading, setLoading] = useState(false);
 
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -28,6 +30,7 @@ const Login = () => {
   };
 
   const signIn = (e) => {
+    setLoading(true);
     e.preventDefault();
     signInUser(emailRef.current.value, passwordRef.current.value)
       .then((res) => {
@@ -37,7 +40,8 @@ const Login = () => {
         history.push(redirect);
         e.target.value = "";
       })
-      .catch((err) => swal("Something went wrong!", `${err.message}`, "error"));
+      .catch((err) => swal("Something went wrong!", `${err.message}`, "error"))
+      .finally(() => setLoading(false));
   };
 
   return (
@@ -67,12 +71,16 @@ const Login = () => {
             className="input"
           />
 
-          <input
-            onClick={signIn}
-            className="btn"
-            type="submit"
-            value="Submit"
-          />
+          {loading ? (
+            "Logging..."
+          ) : (
+            <input
+              onClick={signIn}
+              className="btn"
+              type="submit"
+              value="Submit"
+            />
+          )}
           <p
             style={{
               textAlign: "center",
